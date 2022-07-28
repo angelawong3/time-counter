@@ -17,6 +17,15 @@ buttons.forEach(function (button) {
     if (styles.contains("increase")) {
       count++;
     }
+    if (count > 0) {
+      value.style.color = "blue";
+    }
+    if (count < 0) {
+      value.style.color = "red";
+    }
+    if (count === 0) {
+      value.style.color = "black";
+    }
     value.textContent = count;
   });
 });
